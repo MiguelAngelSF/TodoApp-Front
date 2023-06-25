@@ -9,7 +9,7 @@ function tasksPage() {
     getTasks()
   }, [])
 
-  if (tasks.length === 0) return (<h1>No hay tareas registradas</h1>)
+  if (tasks.length === 0) return (<h1 className="text-2xl font-bold text-white py-8 px-9 mx-9">No hay tareas registradas</h1>)
 
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-2">
