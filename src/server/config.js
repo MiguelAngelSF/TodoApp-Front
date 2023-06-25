@@ -1,0 +1,1 @@
+export const SERVER = process.env.SERVER || 'todoapp-examenpractico-production.up.railway.app/api';
