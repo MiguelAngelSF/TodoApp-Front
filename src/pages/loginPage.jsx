@@ -17,7 +17,7 @@ function loginPage() {
   }, [isAuthenticated]);
 
   return (
-    <div className='flex h-[calc(80vh-100px)] items-center justify-center'>
+    <div className='flex h-[calc(100vh-100px)] items-center justify-center'>
       <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
       {
         signinErrors.map((error, i) => (
@@ -30,8 +30,8 @@ function loginPage() {
         <form onSubmit={onSubmit}>
           <input type="email" {...register("email", {required:true})}
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
-            placeholder="E-mail"/>
-          {errors.email && (<p className="text-red-500">El E-mail es requerido</p>)}
+            placeholder="Correo Electrónico"/>
+          {errors.email && (<p className="text-red-500">El correo es requerido</p>)}
           <input type="password" {...register("password", {required:true})}
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
             placeholder="Contraseña"/>
@@ -40,9 +40,9 @@ function loginPage() {
         </form>
         <br />
         <br />
-        <p className="flex gap-x-2 justify-between">
-          No estas registrado? Accede<Link to="/register"
-          className="text-sky-500">Registro</Link>
+        <p>
+          <Link to="/register"
+          className="text-sky-500">No estas registrado? Regístrate aquí</Link>
         </p>
       </div>
     </div>

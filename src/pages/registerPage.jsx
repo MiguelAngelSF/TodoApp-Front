@@ -19,7 +19,7 @@ function registerPage() {
   }, [isAuthenticated]);
   
   return (
-    <div className="flex h-[calc(80vh-100px)] items-center justify-center my-3">
+    <div className="flex h-[calc(100vh-100px)] items-center justify-center my-3">
       <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
         {
           registerErrors.map((error, i) => (
@@ -32,23 +32,23 @@ function registerPage() {
         <h1 className='text-2xl font-bold text-white'>Registro de Usuario</h1>
           <input type="text" {...register("username", {required:true})}
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
-            placeholder="Username"/>
-          {errors.username && (<p className="text-red-500">El username es requerido</p>)}
+            placeholder="Nombre de usuario"/>
+          {errors.username && (<p className="text-red-500">El nombre es requerido</p>)}
           <input type="email" {...register("email", {required:true})}
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
-            placeholder="E-mail"/>
-          {errors.email && (<p className="text-red-500">El e-mail es requerido</p>)}
+            placeholder="Correo Electrónico"/>
+          {errors.email && (<p className="text-red-500">El correo es requerido</p>)}
           <input type="password" {...register("password", {required:true})}
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
-            placeholder="Password"/>
+            placeholder="Contraseña"/>
           {errors.username && (<p className="text-red-500">La contraseña es requerida</p>)}
           <button className="bg-sky-500 hover:bg-sky-600 text white px-7 py-2 my-2 rounded-md" type="submit">Registrarse</button>
         </form>
         <br />
         <br />
         <p className="flex gap-x-2 justify-between">
-            Estas registrado? Accede<Link to="/login"
-            className="text-sky-500">Login</Link>
+            <Link to="/login"
+            className="text-sky-500">Estas registrado? Accede</Link>
         </p>
       </div>
     </div>
