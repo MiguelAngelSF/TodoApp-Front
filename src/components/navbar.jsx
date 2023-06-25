@@ -6,12 +6,12 @@ function navbar() {
     const { isAuthenticated, logout, user } = useAuth();
 
     return (
-        <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-lg">
+        <nav className="bg-zinc-700 flex justify-between py-5 px-10">
             <h1 className="text-2xl font-bold">Administrador de Tareas</h1>
             <ul className="flex gap-x-2">
                 {isAuthenticated ? (
                     <>
-                        <li>
+                        <li className="text-1xl font-bold">
                             {user.username}
                         </li>
                         <li>

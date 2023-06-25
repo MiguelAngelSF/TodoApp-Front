@@ -36,8 +36,10 @@ function loginPage() {
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
             placeholder="Contraseña"/>
           {errors.password && (<p className="text-red-500">La contraseña es requerida</p>)}
-          <button type="submit">Login</button>
+          <button className="bg-sky-500 hover:bg-sky-600 text white px-7 py-2 my-2 rounded-md" type="submit">Login</button>
         </form>
+        <br />
+        <br />
         <p className="flex gap-x-2 justify-between">
           No estas registrado? Accede<Link to="/register"
           className="text-sky-500">Registro</Link>

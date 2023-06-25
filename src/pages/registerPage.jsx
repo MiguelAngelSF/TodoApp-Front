@@ -19,7 +19,7 @@ function registerPage() {
   }, [isAuthenticated]);
   
   return (
-    <div className="flex h-[calc(80vh-100px)] items-center justify-center">
+    <div className="flex h-[calc(80vh-100px)] items-center justify-center my-3">
       <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
         {
           registerErrors.map((error, i) => (
@@ -29,6 +29,7 @@ function registerPage() {
           ))
         }
         <form onSubmit={onSubmit}>
+        <h1 className='text-2xl font-bold text-white'>Registro de Usuario</h1>
           <input type="text" {...register("username", {required:true})}
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
             placeholder="Username"/>
@@ -41,9 +42,10 @@ function registerPage() {
             className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
             placeholder="Password"/>
           {errors.username && (<p className="text-red-500">La contraseña es requerida</p>)}
-          <button type="submit">Registrarse</button>
+          <button className="bg-sky-500 hover:bg-sky-600 text white px-7 py-2 my-2 rounded-md" type="submit">Registrarse</button>
         </form>
-
+        <br />
+        <br />
         <p className="flex gap-x-2 justify-between">
             Estas registrado? Accede<Link to="/login"
             className="text-sky-500">Login</Link>
